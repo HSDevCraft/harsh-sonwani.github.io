@@ -886,6 +886,42 @@ img { max-width: 100%; }
 }
 
 /* ============================================================
+   RESUME
+   ============================================================ */
+.resume { background: var(--bg2); }
+
+.resume-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 2.5rem;
+  display: flex; align-items: center; gap: 2rem;
+  transition: all var(--transition);
+}
+.resume-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(108,99,255,0.15); border-color: rgba(108,99,255,0.3); }
+
+.resume-icon {
+  width: 80px; height: 80px; border-radius: 16px;
+  background: var(--gradient); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(108,99,255,0.35);
+}
+
+.resume-content {
+  flex: 1;
+}
+.resume-content h3 {
+  font-size: 1.3rem; font-weight: 700; color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.resume-content p {
+  font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;
+}
+
+.resume-card .btn-primary {
+  flex-shrink: 0;
+}
+
+/* ============================================================
    ACHIEVEMENTS
    ============================================================ */
 .achievements { background: var(--bg); }
