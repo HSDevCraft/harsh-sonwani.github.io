@@ -1,208 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Sonwani - AI/ML Engineer</title>
-    <meta name="description" content="Harsh Sonwani - Senior AI/ML Engineer specializing in GenAI, LLMs, RAG systems, and Agentic AI at HCLSoftware.">
-    <link rel="stylesheet" href="styles.css">
+    <title>Harsh Sonwani — AI/ML Engineer</title>
+    <meta name="description" content="Harsh Sonwani — Senior AI/ML Engineer at HCLSoftware specializing in GenAI, LLMs, RAG systems, and Agentic AI.">
+    <meta name="keywords" content="AI ML Engineer, GenAI, LLM, RAG, Agentic AI, HCLSoftware, NIT Rourkela, Harsh Sonwani">
+    <meta property="og:title" content="Harsh Sonwani — AI/ML Engineer">
+    <meta property="og:description" content="Senior AI/ML Engineer specializing in GenAI, LLMs, RAG systems, and Agentic AI at HCLSoftware.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="container nav-inner">
-            <div class="nav-brand">Harsh Sonwani</div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>HS<span class="logo-bracket">/&gt;</span>
+            </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="hero-badge">Available for Opportunities</div>
-            <h1>Harsh Sonwani</h1>
-            <p class="hero-role">Senior AI/ML Engineer &nbsp;|&nbsp; GenAI &amp; Agentic Systems</p>
-            <p class="hero-sub">
-                M.Tech CSE · NIT Rourkela &nbsp;·&nbsp; HCLSoftware · Bengaluru
-            </p>
-            <p class="hero-summary">
-                Building scalable GenAI and automation solutions — from RAG pipelines and LLM inference optimisation to multi-agent systems and enterprise AI integrations.
-            </p>
-            <div class="cta-buttons">
-                <a href="#experience" class="btn btn-primary">View Experience</a>
-                <a href="https://github.com/HSDevCraft" class="btn btn-outline" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/harsh-sonwani-034649158/" class="btn btn-outline" target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin"></i> Connect
-                </a>
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="hero-grid-lines"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content reveal-up">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span> Available for Opportunities
+                </div>
+                <h1 class="hero-name">
+                    Hi, I'm <span class="gradient-text">Harsh Sonwani</span>
+                </h1>
+                <div class="hero-typed">
+                    <span class="typed-prefix">I build </span>
+                    <span class="typed-text" id="typedText"></span><span class="type-cursor">|</span>
+                </div>
+                <p class="hero-desc">
+                    Senior AI/ML Engineer at <strong>HCLSoftware</strong> · Designing scalable GenAI platforms,
+                    RAG pipelines, and Agentic AI systems that power enterprise automation at scale.
+                </p>
+                <div class="hero-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Bengaluru, India</span>
+                    <span><i class="fas fa-graduation-cap"></i> M.Tech · NIT Rourkela</span>
+                    <span><i class="fas fa-briefcase"></i> 3+ Years Experience</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/harsh-sonwani-034649158/" class="btn-ghost" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                    <a href="https://github.com/HSDevCraft" class="btn-ghost" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="hero-scroll-hint">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="section-label">Who I Am</div>
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I'm a Senior AI/ML Engineer at <strong>HCLSoftware</strong>, Bengaluru, specialising in
-                        GenAI, Agentic AI, and scalable LLM systems. With a strong research foundation from
-                        <strong>NIT Rourkela</strong> (M.Tech CSE, CGPA 8.15) and undergraduate training at
-                        <strong>BIT Durg</strong> (B.Tech IT, CGPA 9.17), I bridge academic rigour with real-world
-                        engineering.
-                    </p>
-                    <p>
-                        I've led AI engineering teams delivering GenAI automation for enterprise clients, built
-                        multi-tenant RAG stacks, and pioneered Sovereign AI POCs for public-sector applications.
-                        My work spans LLM fine-tuning, quantisation, NLP-to-SQL, and knowledge-graph-based retrieval.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Industry</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">1200+</span>
-                            <span class="stat-label">DSA Problems Solved</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2</span>
-                            <span class="stat-label">Research Publications</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">70%</span>
-                            <span class="stat-label">Workload Reduction Achieved</span>
-                        </div>
+            <div class="hero-visual reveal-right">
+                <div class="avatar-wrap">
+                    <div class="avatar-ring">
+                        <div class="avatar-core">HS</div>
+                    </div>
+                    <div class="orbit orbit-1">
+                        <div class="orbit-dot"><i class="fas fa-brain"></i></div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="orbit-dot"><i class="fas fa-robot"></i></div>
+                    </div>
+                    <div class="orbit orbit-3">
+                        <div class="orbit-dot"><i class="fab fa-python"></i></div>
                     </div>
                 </div>
-                <div class="about-highlights">
-                    <h3>Core Focus Areas</h3>
-                    <ul class="highlight-list">
-                        <li><i class="fas fa-robot"></i> Agentic AI &amp; Multi-Agent Systems</li>
-                        <li><i class="fas fa-database"></i> RAG Pipelines &amp; Knowledge Graphs</li>
-                        <li><i class="fas fa-brain"></i> LLM Fine-tuning &amp; Inference Optimisation</li>
-                        <li><i class="fas fa-cogs"></i> GenAI Platform Engineering</li>
-                        <li><i class="fas fa-search"></i> Vector Search &amp; Embedding Strategies</li>
-                        <li><i class="fas fa-network-wired"></i> Enterprise AI Integrations</li>
-                        <li><i class="fas fa-shield-alt"></i> Sovereign AI &amp; Secure LLM Deployment</li>
-                        <li><i class="fas fa-chart-line"></i> NLP-to-SQL Automation</li>
-                    </ul>
+                <div class="float-card fc-1"><i class="fas fa-layer-group"></i> RAG Systems</div>
+                <div class="float-card fc-2"><i class="fas fa-microchip"></i> LLM Inference</div>
+                <div class="float-card fc-3"><i class="fas fa-project-diagram"></i> Agentic AI</div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <p>I'm a <strong>Senior AI/ML Engineer</strong> at HCLSoftware, Bengaluru, specialising in production-grade GenAI systems. I hold an <strong>M.Tech in CSE from NIT Rourkela</strong> (CGPA 8.15) and a <strong>B.Tech in IT from BIT Durg</strong> (CGPA 9.17).</p>
+                    <p>Over 3+ years, I've led AI engineering teams, shipped enterprise-scale RAG platforms, pioneered Sovereign AI POCs for public-sector applications, and published research on EEG-based emotion recognition.</p>
+                    <div class="tag-cloud">
+                        <span class="tag">RAG Pipelines</span><span class="tag">Agentic AI</span>
+                        <span class="tag">LLM Fine-tuning</span><span class="tag">Knowledge Graphs</span>
+                        <span class="tag">Vector Search</span><span class="tag">NLP-to-SQL</span>
+                        <span class="tag">Sovereign AI</span><span class="tag">Team Leadership</span>
+                    </div>
+                    <div class="social-row">
+                        <a href="https://github.com/HSDevCraft" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/harsh-sonwani-034649158/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://huggingface.co/hs-hf" target="_blank" rel="noopener" class="social-btn"><i class="fas fa-smile"></i></a>
+                        <a href="https://medium.com/@harshsonwani78" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                <div class="stats-grid reveal-right">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="stat-num" data-target="3" data-suffix="+">0+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <div class="stat-num" data-target="1200" data-suffix="+">0+</div>
+                        <div class="stat-label">DSA Problems</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="stat-num" data-target="2" data-suffix="">0</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="stat-num" data-target="70" data-suffix="%">0%</div>
+                        <div class="stat-label">Workload Reduced</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
+    <!-- Experience -->
+    <section id="experience" class="section experience">
         <div class="container">
-            <div class="section-label">Career</div>
-            <h2 class="section-title">Professional Experience</h2>
+            <div class="section-header reveal-up">
+                <span class="section-tag">Career</span>
+                <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+            </div>
             <div class="timeline">
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="job-header">
+                <div class="tl-item reveal-left">
+                    <div class="tl-marker"><div class="tl-dot current"></div></div>
+                    <div class="tl-card">
+                        <div class="tl-head">
                             <div>
                                 <h3>Senior Software Engineer II</h3>
-                                <p class="company">HCLSoftware · SPARC R&amp;D &nbsp;—&nbsp; Bengaluru, India</p>
+                                <p class="tl-company"><i class="fas fa-building"></i> HCLSoftware · SPARC R&amp;D — Bengaluru, India</p>
                             </div>
-                            <span class="job-date">Dec 2025 – Present</span>
+                            <span class="tl-badge current-badge"><span class="live-dot"></span>Dec 2025 – Present</span>
                         </div>
-                        <ul class="job-points">
-                            <li>Led the integration of LLMs into the <strong>IGRS UP Government Jansunwai</strong> project, streamlining daily activities and automating key processes to boost productivity.</li>
-                            <li>Achieved <strong>70% reduction in manual workload</strong> and substantially enhanced operational efficiency through strategic implementations.</li>
-                            <li>Pioneering the use of <strong>Sovereign AI &amp; LLMs</strong> to build secure, high-efficiency POCs for public-sector enterprise applications.</li>
-                            <li>Implemented <strong>knowledge-graph-based RAG pipelines</strong> to ensure factual consistency and deliver enriched, grounded responses for complex datasets.</li>
-                            <li>Performed comprehensive analysis of <strong>NER models and relationship extraction</strong> techniques to improve entity recognition and relational accuracy.</li>
+                        <ul class="tl-points">
+                            <li>Led LLM integration into the <strong>IGRS UP Government Jansunwai</strong> project, automating workflows and boosting productivity.</li>
+                            <li>Achieved <strong>70% reduction in manual workload</strong> through strategic AI implementations.</li>
+                            <li>Pioneering <strong>Sovereign AI &amp; LLMs</strong> for secure, high-efficiency POCs in public-sector enterprise applications.</li>
+                            <li>Implemented <strong>knowledge-graph-based RAG pipelines</strong> for factual consistency across complex datasets.</li>
+                            <li>Comprehensive analysis of <strong>NER models and relationship extraction</strong> for improved entity recognition.</li>
                         </ul>
-                        <div class="job-tags">
-                            <span>Sovereign AI</span><span>RAG</span><span>Knowledge Graphs</span><span>NER</span><span>LLMs</span>
+                        <div class="tl-tags">
+                            <span>Sovereign AI</span><span>Knowledge Graphs</span><span>RAG</span><span>NER</span><span>LLMs</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="job-header">
+                <div class="tl-item reveal-right">
+                    <div class="tl-marker"><div class="tl-dot"></div></div>
+                    <div class="tl-card">
+                        <div class="tl-head">
                             <div>
-                                <h3>Senior Software Engineer II &ndash; AI Engineering Team Lead</h3>
-                                <p class="company">HCLSoftware · BigFix AEX R&amp;D &nbsp;—&nbsp; Bengaluru, India</p>
+                                <h3>Senior Software Engineer II — AI Engineering Team Lead</h3>
+                                <p class="tl-company"><i class="fas fa-building"></i> HCLSoftware · BigFix AEX R&amp;D — Bengaluru, India</p>
                             </div>
-                            <span class="job-date">Oct 2024 – Dec 2025</span>
+                            <span class="tl-badge">Oct 2024 – Dec 2025</span>
                         </div>
-                        <ul class="job-points">
-                            <li>Led an AI engineering team delivering automation and GenAI solutions for enterprise workflows.</li>
-                            <li>Provided <strong>Agentic AI solutions</strong> through collaboration with ServiceNow, Salesforce, Ansible, Jira, Slack, AWS, and more.</li>
-                            <li>Developed <strong>IVR (Interactive Voice Response) agents</strong> powered by LLMs, aligned with client requirements.</li>
-                            <li>Built a <strong>multi-tenant RAG stack</strong> supporting large-scale document processing with high availability.</li>
-                            <li>Improved LLM performance through <strong>quantisation, fine-tuning workflows, NLP-to-SQL automation</strong>, and agent-driven Ansible playbook execution with HITL oversight.</li>
-                            <li>Mentored junior engineers and contributed to hiring efforts to strengthen AI capability within the organisation.</li>
+                        <ul class="tl-points">
+                            <li>Led AI engineering team delivering automation and GenAI solutions for enterprise IT workflows.</li>
+                            <li>Provided <strong>Agentic AI solutions</strong> through ServiceNow, Salesforce, Ansible, Jira, Slack, and AWS integrations.</li>
+                            <li>Developed <strong>LLM-powered IVR agents</strong> collaborating directly with enterprise clients.</li>
+                            <li>Built a <strong>multi-tenant RAG stack</strong> for large-scale document processing with high availability.</li>
+                            <li>Improved LLM performance via <strong>quantisation, fine-tuning, NLP-to-SQL automation</strong>, and agent-driven Ansible execution with HITL.</li>
+                            <li>Mentored junior engineers and contributed to hiring efforts.</li>
                         </ul>
-                        <div class="job-tags">
-                            <span>Team Lead</span><span>Agentic AI</span><span>Multi-tenant RAG</span><span>IVR Agents</span><span>Quantisation</span><span>NLP-to-SQL</span>
+                        <div class="tl-tags">
+                            <span>Team Lead</span><span>Agentic AI</span><span>Multi-tenant RAG</span><span>IVR</span><span>NLP-to-SQL</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="job-header">
+                <div class="tl-item reveal-left">
+                    <div class="tl-marker"><div class="tl-dot"></div></div>
+                    <div class="tl-card">
+                        <div class="tl-head">
                             <div>
-                                <h3>Senior Software Engineer I &ndash; GenAI R&amp;D</h3>
-                                <p class="company">HCLSoftware · BigFix AEX R&amp;D &nbsp;—&nbsp; Bengaluru, India</p>
+                                <h3>Senior Software Engineer I — GenAI R&amp;D</h3>
+                                <p class="tl-company"><i class="fas fa-building"></i> HCLSoftware · BigFix AEX R&amp;D — Bengaluru, India</p>
                             </div>
-                            <span class="job-date">July 2023 – Oct 2024</span>
+                            <span class="tl-badge">July 2023 – Oct 2024</span>
                         </div>
-                        <ul class="job-points">
-                            <li>Contributed to the development of the <strong>LUCY GenAI platform</strong>, enhancing UX and improving adoption across teams.</li>
-                            <li>Maintained and improved a production-grade chatbot system ensuring reliable performance under high query volumes.</li>
-                            <li>Fine-tuned and optimised <strong>embedding models</strong> to improve retrieval latency and similarity search quality.</li>
-                            <li>Implemented <strong>vector search optimisations</strong> resulting in noticeably faster document retrieval in production.</li>
-                            <li>Designed embedding strategies that maintain retrieval accuracy while reducing overall storage usage.</li>
+                        <ul class="tl-points">
+                            <li>Contributed to the <strong>LUCY GenAI platform</strong>, improving UX and adoption across teams.</li>
+                            <li>Maintained a production-grade chatbot ensuring reliability under high query volumes.</li>
+                            <li>Fine-tuned <strong>embedding models</strong> to improve retrieval latency and similarity search quality.</li>
+                            <li>Implemented <strong>vector search optimisations</strong> for noticeably faster document retrieval.</li>
+                            <li>Designed embedding strategies balancing retrieval accuracy and storage efficiency.</li>
                         </ul>
-                        <div class="job-tags">
-                            <span>GenAI Platform</span><span>Embedding Models</span><span>Vector Search</span><span>Chatbot</span><span>Production ML</span>
+                        <div class="tl-tags">
+                            <span>LUCY Platform</span><span>Embeddings</span><span>Vector Search</span><span>Chatbot</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot timeline-dot--intern"></div>
-                    <div class="timeline-card">
-                        <div class="job-header">
+                <div class="tl-item reveal-right">
+                    <div class="tl-marker"><div class="tl-dot intern-dot"></div></div>
+                    <div class="tl-card">
+                        <div class="tl-head">
                             <div>
                                 <h3>GenAI Research Intern</h3>
-                                <p class="company">Variable Energy Cyclotron Centre · Dept. of Atomic Energy &nbsp;—&nbsp; Kolkata, India</p>
+                                <p class="tl-company"><i class="fas fa-flask"></i> Variable Energy Cyclotron Centre · Dept. of Atomic Energy — Kolkata, India</p>
                             </div>
-                            <span class="job-date">June 2023 – July 2023</span>
+                            <span class="tl-badge">June 2023 – July 2023</span>
                         </div>
-                        <ul class="job-points">
-                            <li>Worked on low-bandwidth video transmission using <strong>GAN-based enhancement</strong> techniques.</li>
-                            <li>Built a proof-of-concept system aimed at enabling smoother video communication in low-connectivity regions.</li>
+                        <ul class="tl-points">
+                            <li>Developed a POC for <strong>low-bandwidth video transmission using GAN-based enhancement</strong> techniques.</li>
+                            <li>Built a system enabling smoother video communication in low-connectivity regions.</li>
                         </ul>
-                        <div class="job-tags">
+                        <div class="tl-tags">
                             <span>GANs</span><span>Video Processing</span><span>Research</span>
                         </div>
                     </div>
@@ -212,183 +264,216 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
+    <!-- Skills -->
+    <section id="skills" class="section skills">
         <div class="container">
-            <div class="section-label">Tech Stack</div>
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                    <h3>AI / ML</h3>
-                    <div class="skill-tags">
-                        <span>LangChain</span><span>LangGraph</span><span>OpenAI GPT</span>
-                        <span>Claude</span><span>Llama</span><span>Mistral</span>
-                        <span>LoRA</span><span>QLoRA</span><span>Prompt Engineering</span>
-                        <span>RAG</span><span>Agentic AI</span><span>vLLM</span>
+            <div class="section-header reveal-up">
+                <span class="section-tag">Tech Stack</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-wrap">
+                <div class="skill-group reveal-up">
+                    <div class="sg-header">
+                        <div class="sg-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI / ML &amp; LLMs</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar" data-level="95">
+                            <div class="sb-info"><span>LangChain / LangGraph</span><span class="sb-pct">95%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
+                        <div class="skill-bar" data-level="92">
+                            <div class="sb-info"><span>RAG &amp; Agentic AI</span><span class="sb-pct">92%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
+                        <div class="skill-bar" data-level="90">
+                            <div class="sb-info"><span>OpenAI / Claude / Llama / Mistral</span><span class="sb-pct">90%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
+                        <div class="skill-bar" data-level="88">
+                            <div class="sb-info"><span>LoRA / QLoRA Fine-tuning</span><span class="sb-pct">88%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
+                        <div class="skill-bar" data-level="85">
+                            <div class="sb-info"><span>vLLM / Prompt Engineering</span><span class="sb-pct">85%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Frameworks</h3>
-                    <div class="skill-tags">
-                        <span>PyTorch</span><span>TensorFlow</span><span>FastAPI</span>
-                        <span>HuggingFace</span><span>LangChain</span><span>LangGraph</span>
+                <div class="skill-group reveal-up">
+                    <div class="sg-header">
+                        <div class="sg-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Frameworks &amp; Libraries</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar" data-level="93">
+                            <div class="sb-info"><span>PyTorch</span><span class="sb-pct">93%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
+                        <div class="skill-bar" data-level="90">
+                            <div class="sb-info"><span>HuggingFace Transformers</span><span class="sb-pct">90%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
+                        <div class="skill-bar" data-level="88">
+                            <div class="sb-info"><span>TensorFlow / Keras</span><span class="sb-pct">88%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
+                        <div class="skill-bar" data-level="90">
+                            <div class="sb-info"><span>FastAPI</span><span class="sb-pct">90%</span></div>
+                            <div class="sb-track"><div class="sb-fill"></div></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>Vector Databases</h3>
-                    <div class="skill-tags">
+                <div class="skill-group reveal-up">
+                    <div class="sg-header">
+                        <div class="sg-icon"><i class="fas fa-database"></i></div>
+                        <h3>Vector Databases</h3>
+                    </div>
+                    <div class="chip-cloud">
                         <span>Pinecone</span><span>Chroma</span><span>FAISS</span>
                         <span>Qdrant</span><span>Weaviate</span><span>MongoDB Atlas</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                    <h3>MLOps &amp; Tools</h3>
-                    <div class="skill-tags">
-                        <span>Docker</span><span>Git</span><span>SQL</span><span>Postman</span>
+                <div class="skill-group reveal-up">
+                    <div class="sg-header">
+                        <div class="sg-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud, Tools &amp; Languages</h3>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-terminal"></i></div>
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span>Python</span><span>C / C++</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud</h3>
-                    <div class="skill-tags">
+                    <div class="chip-cloud">
                         <span>Azure AI Services</span><span>Azure OpenAI</span><span>AWS</span>
+                        <span>Docker</span><span>Git</span><span>SQL</span>
+                        <span>Postman</span><span>Python</span><span>C/C++</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education section">
+    <!-- Education -->
+    <section id="education" class="section education">
         <div class="container">
-            <div class="section-label">Academic Background</div>
-            <h2 class="section-title">Education</h2>
+            <div class="section-header reveal-up">
+                <span class="section-tag">Academic</span>
+                <h2 class="section-title">Education</h2>
+            </div>
             <div class="edu-grid">
-                <div class="edu-card">
-                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="edu-info">
-                        <h3>M.Tech · Computer Science &amp; Engineering</h3>
-                        <p class="edu-inst">National Institute of Technology, Rourkela</p>
-                        <p class="edu-period">Aug 2021 – June 2023</p>
-                        <span class="edu-grade">CGPA: 8.15 / 10</span>
+                <div class="edu-card reveal-left">
+                    <div class="edu-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-body">
+                        <span class="edu-year">2021 – 2023</span>
+                        <h3>M.Tech — Computer Science &amp; Engineering</h3>
+                        <p>National Institute of Technology, Rourkela</p>
+                        <div class="edu-grade-bar">
+                            <div class="egb-fill" style="width:81.5%"></div>
+                            <span>CGPA: 8.15 / 10</span>
+                        </div>
                     </div>
                 </div>
-                <div class="edu-card">
-                    <div class="edu-icon"><i class="fas fa-university"></i></div>
-                    <div class="edu-info">
-                        <h3>B.Tech · Information Technology</h3>
-                        <p class="edu-inst">Bhilai Institute of Technology, Durg</p>
-                        <p class="edu-period">Aug 2017 – May 2021</p>
-                        <span class="edu-grade">CGPA: 9.17 / 10</span>
+                <div class="edu-card reveal-right">
+                    <div class="edu-icon-wrap"><i class="fas fa-university"></i></div>
+                    <div class="edu-body">
+                        <span class="edu-year">2017 – 2021</span>
+                        <h3>B.Tech — Information Technology</h3>
+                        <p>Bhilai Institute of Technology, Durg</p>
+                        <div class="edu-grade-bar">
+                            <div class="egb-fill" style="width:91.7%"></div>
+                            <span>CGPA: 9.17 / 10</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
+    <!-- Projects -->
+    <section id="projects" class="section projects">
         <div class="container">
-            <div class="section-label">Open Source</div>
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header reveal-up">
+                <span class="section-tag">Open Source</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>NLP Master Guide</h3>
-                        <a href="https://github.com/HSDevCraft/NLP_Master_Guide" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                <div class="proj-card reveal-up">
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-book-reader"></i></div>
+                        <a href="https://github.com/HSDevCraft/NLP_Master_Guide" target="_blank" rel="noopener" class="proj-github"><i class="fab fa-github"></i></a>
                     </div>
-                    <p>15-module comprehensive guide covering NLP fundamentals to production — LLM internals, Flash Attention, Speculative Decoding, MoE, Self-RAG, CRAG, ReAct, distributed training (FSDP, vLLM, TRT-LLM), and an architect interview playbook with 60+ Q&amp;A.</p>
-                    <div class="project-tags">
+                    <h3>NLP Master Guide</h3>
+                    <p>15-module guide from NLP fundamentals to production — LLM internals, Flash Attention, Speculative Decoding, MoE, Self-RAG, CRAG, ReAct, distributed training, and a 60+ Q&amp;A architect interview playbook.</p>
+                    <div class="proj-tech">
                         <span>NLP</span><span>LLMs</span><span>RAG</span><span>Distributed Training</span><span>Education</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>AI/ML Interview Prep</h3>
-                        <a href="https://github.com/HSDevCraft/AI_ML_Interview_Prep" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                <div class="proj-card reveal-up">
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-user-tie"></i></div>
+                        <a href="https://github.com/HSDevCraft/AI_ML_Interview_Prep" target="_blank" rel="noopener" class="proj-github"><i class="fab fa-github"></i></a>
                     </div>
-                    <p>Complete interview preparation covering DSA, advanced Python internals, ML fundamentals (supervised, unsupervised, mathematical foundations), and system design patterns for ML/AI roles.</p>
-                    <div class="project-tags">
-                        <span>Interview Prep</span><span>ML</span><span>DSA</span><span>Python</span>
+                    <h3>AI/ML Interview Prep</h3>
+                    <p>Complete interview preparation covering DSA, advanced Python internals, ML fundamentals (supervised, unsupervised, mathematical foundations), and system design patterns for ML/AI engineering roles.</p>
+                    <div class="proj-tech">
+                        <span>Interview Prep</span><span>ML</span><span>DSA</span><span>System Design</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>LLM Evaluation Guide</h3>
-                        <a href="https://github.com/HSDevCraft/LLM_Evaluation_Guide" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                <div class="proj-card reveal-up">
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-microscope"></i></div>
+                        <a href="https://github.com/HSDevCraft/LLM_Evaluation_Guide" target="_blank" rel="noopener" class="proj-github"><i class="fab fa-github"></i></a>
                     </div>
-                    <p>Framework for evaluating Large Language Models with metrics, benchmarks, LLM-as-judge patterns, and practical evaluation pipelines including compare_models and run_full_evaluation scripts.</p>
-                    <div class="project-tags">
-                        <span>LLM Evaluation</span><span>Benchmarking</span><span>Framework</span>
+                    <h3>LLM Evaluation Guide</h3>
+                    <p>Framework for evaluating Large Language Models with metrics, benchmarks, LLM-as-judge patterns, and practical pipelines including model comparison and full evaluation scripts.</p>
+                    <div class="proj-tech">
+                        <span>LLM Eval</span><span>Benchmarking</span><span>LLM-as-Judge</span><span>Python</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Agentic AI Course</h3>
-                        <a href="https://github.com/HSDevCraft/agentic-ai-course" target="_blank" rel="noopener" class="project-link" title="View on GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                <div class="proj-card reveal-up">
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-project-diagram"></i></div>
+                        <a href="https://github.com/HSDevCraft/agentic-ai-course" target="_blank" rel="noopener" class="proj-github"><i class="fab fa-github"></i></a>
                     </div>
-                    <p>Structured course on building agentic AI systems with practical hands-on assignments, a capstone project, and community contribution guidelines for learners.</p>
-                    <div class="project-tags">
-                        <span>AI Agents</span><span>Course</span><span>LangChain</span><span>LangGraph</span>
+                    <h3>Agentic AI Course</h3>
+                    <p>Hands-on course on building agentic AI systems with practical assignments, a capstone project, and community contribution guidelines covering LangChain, LangGraph, and multi-agent architectures.</p>
+                    <div class="proj-tech">
+                        <span>AI Agents</span><span>LangGraph</span><span>LangChain</span><span>Multi-Agent</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements section">
+    <!-- Achievements -->
+    <section id="achievements" class="section achievements">
         <div class="container">
-            <div class="section-label">Recognition</div>
-            <h2 class="section-title">Achievements &amp; Publications</h2>
-            <div class="achieve-grid">
-                <div class="achieve-card">
-                    <div class="achieve-icon"><i class="fas fa-book-open"></i></div>
+            <div class="section-header reveal-up">
+                <span class="section-tag">Recognition</span>
+                <h2 class="section-title">Achievements &amp; <span class="gradient-text">Publications</span></h2>
+            </div>
+            <div class="ach-grid">
+                <div class="ach-card reveal-up">
+                    <div class="ach-icon"><i class="fas fa-book-open"></i></div>
                     <h3>Research Publications</h3>
                     <ul>
-                        <li><strong>"SimpleRNN Based Human Emotion Recognition Using EEG Signals"</strong> — <a href="https://link.springer.com/chapter/10.1007/978-3-031-81339-9_5" target="_blank" rel="noopener">Springer</a></li>
-                        <li><strong>"Exploration of Impactful Brain Region for Affective Computing"</strong> — <a href="https://link.springer.com/chapter/10.1007/978-3-031-81339-9_5" target="_blank" rel="noopener">Taylor &amp; Francis</a></li>
-                        <li>Technical articles on <a href="https://medium.com/@harshsonwani78" target="_blank" rel="noopener">Medium</a></li>
+                        <li><strong>"SimpleRNN Based Human Emotion Recognition Using EEG Signals"</strong> — <a href="https://link.springer.com/chapter/10.1007/978-3-031-81339-9_5" target="_blank" rel="noopener">Springer <i class="fas fa-external-link-alt"></i></a></li>
+                        <li><strong>"Exploration of Impactful Brain Region for Affective Computing"</strong> — <a href="https://link.springer.com/chapter/10.1007/978-3-031-81339-9_5" target="_blank" rel="noopener">Taylor &amp; Francis <i class="fas fa-external-link-alt"></i></a></li>
+                        <li>Technical writing on <a href="https://medium.com/@harshsonwani78" target="_blank" rel="noopener">Medium <i class="fas fa-external-link-alt"></i></a></li>
                     </ul>
                 </div>
-                <div class="achieve-card">
-                    <div class="achieve-icon"><i class="fas fa-certificate"></i></div>
+                <div class="ach-card reveal-up">
+                    <div class="ach-icon"><i class="fas fa-certificate"></i></div>
                     <h3>Certifications</h3>
                     <ul>
-                        <li><a href="https://credentials.databricks.com/ccaf5487-6b64-4bf8-8990-51be07512452#acc.RGZr3geu" target="_blank" rel="noopener">Databricks GenAI Fundamentals</a></li>
-                        <li><a href="https://drive.google.com/file/d/1hYGFP7VqX9QRlTOloNMuRtxTWgKdp64n/view?usp=sharing" target="_blank" rel="noopener">Microsoft GenAI Certification</a></li>
-                        <li><a href="https://coursera.org/share/afe2e72ce24157fb7e40729cbedc2aa7" target="_blank" rel="noopener">Prompt Engineering for ChatGPT</a></li>
-                        <li><a href="https://coursera.org/share/075231de25a0744a612755203bd9676f" target="_blank" rel="noopener">GenAI with LLMs</a></li>
+                        <li><a href="https://credentials.databricks.com/ccaf5487-6b64-4bf8-8990-51be07512452#acc.RGZr3geu" target="_blank" rel="noopener">Databricks GenAI Fundamentals <i class="fas fa-external-link-alt"></i></a></li>
+                        <li><a href="https://drive.google.com/file/d/1hYGFP7VqX9QRlTOloNMuRtxTWgKdp64n/view?usp=sharing" target="_blank" rel="noopener">Microsoft GenAI Certification <i class="fas fa-external-link-alt"></i></a></li>
+                        <li><a href="https://coursera.org/share/afe2e72ce24157fb7e40729cbedc2aa7" target="_blank" rel="noopener">Prompt Engineering for ChatGPT <i class="fas fa-external-link-alt"></i></a></li>
+                        <li><a href="https://coursera.org/share/075231de25a0744a612755203bd9676f" target="_blank" rel="noopener">GenAI with LLMs <i class="fas fa-external-link-alt"></i></a></li>
                     </ul>
                 </div>
-                <div class="achieve-card">
-                    <div class="achieve-icon"><i class="fas fa-trophy"></i></div>
+                <div class="ach-card reveal-up">
+                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
                     <h3>Competitive &amp; Academic</h3>
                     <ul>
                         <li><strong>GATE CS 2021</strong> — Qualified</li>
-                        <li><strong>1200+ DSA problems</strong> solved on <a href="https://auth.geeksforgeeks.org/user/harshsonwani78/practice/" target="_blank" rel="noopener">GeeksforGeeks</a> &amp; <a href="https://leetcode.com/u/Harshu-tHEcODER/" target="_blank" rel="noopener">LeetCode</a></li>
+                        <li><strong>1200+ DSA problems</strong> on <a href="https://auth.geeksforgeeks.org/user/harshsonwani78/practice/" target="_blank" rel="noopener">GeeksforGeeks</a> &amp; <a href="https://leetcode.com/u/Harshu-tHEcODER/" target="_blank" rel="noopener">LeetCode</a></li>
                         <li><strong>2nd Prize</strong> — BIT Tech Innovation Contest</li>
                     </ul>
                 </div>
@@ -396,46 +481,86 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- Contact -->
+    <section id="contact" class="section contact">
         <div class="container">
-            <div class="section-label">Let's Connect</div>
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Open to collaborations, research discussions, and exciting AI/ML opportunities.</p>
-            <div class="contact-links">
-                <a href="https://github.com/HSDevCraft" class="contact-link" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                    <small>HSDevCraft</small>
-                </a>
-                <a href="https://www.linkedin.com/in/harsh-sonwani-034649158/" class="contact-link" target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                    <small>harsh-sonwani</small>
-                </a>
-                <a href="https://huggingface.co/hs-hf" class="contact-link" target="_blank" rel="noopener">
-                    <i class="fas fa-smile"></i>
-                    <span>HuggingFace</span>
-                    <small>hs-hf</small>
-                </a>
-                <a href="https://medium.com/@harshsonwani78" class="contact-link" target="_blank" rel="noopener">
-                    <i class="fab fa-medium"></i>
-                    <span>Medium</span>
-                    <small>@harshsonwani78</small>
-                </a>
+            <div class="section-header reveal-up">
+                <span class="section-tag">Let's Connect</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-sub">Open to collaborations, research discussions, and exciting AI/ML opportunities.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left reveal-left">
+                    <h3>Connect With Me</h3>
+                    <div class="contact-cards">
+                        <a href="https://github.com/HSDevCraft" target="_blank" rel="noopener" class="cc-card">
+                            <div class="cc-icon"><i class="fab fa-github"></i></div>
+                            <div class="cc-text"><span>GitHub</span><small>HSDevCraft</small></div>
+                            <i class="fas fa-arrow-right cc-arrow"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/harsh-sonwani-034649158/" target="_blank" rel="noopener" class="cc-card">
+                            <div class="cc-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="cc-text"><span>LinkedIn</span><small>harsh-sonwani</small></div>
+                            <i class="fas fa-arrow-right cc-arrow"></i>
+                        </a>
+                        <a href="https://huggingface.co/hs-hf" target="_blank" rel="noopener" class="cc-card">
+                            <div class="cc-icon"><i class="fas fa-smile"></i></div>
+                            <div class="cc-text"><span>HuggingFace</span><small>hs-hf</small></div>
+                            <i class="fas fa-arrow-right cc-arrow"></i>
+                        </a>
+                        <a href="https://medium.com/@harshsonwani78" target="_blank" rel="noopener" class="cc-card">
+                            <div class="cc-icon"><i class="fab fa-medium"></i></div>
+                            <div class="cc-text"><span>Medium</span><small>@harshsonwani78</small></div>
+                            <i class="fas fa-arrow-right cc-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right reveal-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <input type="text" id="fname" placeholder=" " required>
+                                <label for="fname">Your Name</label>
+                            </div>
+                            <div class="form-field">
+                                <input type="email" id="femail" placeholder=" " required>
+                                <label for="femail">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" id="fsubject" placeholder=" " required>
+                            <label for="fsubject">Subject</label>
+                        </div>
+                        <div class="form-field">
+                            <textarea id="fmessage" rows="5" placeholder=" " required></textarea>
+                            <label for="fmessage">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn-primary form-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p class="form-note" id="formNote"></p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-inner">
-            <p>&copy; 2026 Harsh Sonwani · Senior AI/ML Engineer</p>
-            <p class="footer-links">
-                <a href="https://github.com/HSDevCraft" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/harsh-sonwani-034649158/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                <a href="https://medium.com/@harshsonwani78" target="_blank" rel="noopener"><i class="fab fa-medium"></i></a>
-            </p>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>HS<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p>&copy; 2026 Harsh Sonwani · Senior AI/ML Engineer · HCLSoftware</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/HSDevCraft" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harsh-sonwani-034649158/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://medium.com/@harshsonwani78" target="_blank" rel="noopener"><i class="fab fa-medium"></i></a>
+                    <a href="https://huggingface.co/hs-hf" target="_blank" rel="noopener"><i class="fas fa-smile"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
