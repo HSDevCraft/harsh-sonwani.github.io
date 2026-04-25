@@ -338,6 +338,9 @@ img { max-width: 100%; }
 .orbit-1 { width: 260px; height: 260px; margin: -130px 0 0 -130px; animation-duration: 12s; }
 .orbit-2 { width: 340px; height: 340px; margin: -170px 0 0 -170px; animation-duration: 18s; animation-direction: reverse; }
 .orbit-3 { width: 420px; height: 420px; margin: -210px 0 0 -210px; animation-duration: 24s; }
+.orbit-4 { width: 500px; height: 500px; margin: -250px 0 0 -250px; animation-duration: 30s; animation-direction: reverse; }
+.orbit-5 { width: 580px; height: 580px; margin: -290px 0 0 -290px; animation-duration: 36s; }
+.orbit-6 { width: 660px; height: 660px; margin: -330px 0 0 -330px; animation-duration: 42s; animation-direction: reverse; }
 
 @keyframes orbitSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
@@ -350,10 +353,20 @@ img { max-width: 100%; }
   font-size: 0.9rem; color: var(--primary);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   animation: orbitSpin linear infinite reverse;
+  transition: all 0.3s ease;
+}
+.orbit-dot:hover {
+  transform: translateX(-50%) scale(1.25);
+  box-shadow: 0 0 20px rgba(108,99,255,0.5);
+  background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(0,212,255,0.1));
+  border-color: var(--primary);
 }
 .orbit-1 .orbit-dot { animation-duration: 12s; }
 .orbit-2 .orbit-dot { animation-duration: 18s; animation-direction: normal; }
 .orbit-3 .orbit-dot { animation-duration: 24s; animation-direction: reverse; }
+.orbit-4 .orbit-dot { animation-duration: 30s; animation-direction: normal; }
+.orbit-5 .orbit-dot { animation-duration: 36s; animation-direction: reverse; }
+.orbit-6 .orbit-dot { animation-duration: 42s; animation-direction: normal; }
 
 .float-card {
   position: absolute;
@@ -366,6 +379,20 @@ img { max-width: 100%; }
   display: flex; align-items: center; gap: 7px;
   box-shadow: var(--shadow);
   z-index: 10;
+  transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+  cursor: default;
+}
+.float-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(108,99,255,0.25);
+  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--card), rgba(108,99,255,0.05));
+}
+.float-card i {
+  transition: transform 0.3s ease;
+}
+.float-card:hover i {
+  transform: rotate(360deg) scale(1.1);
 }
 .float-card i { color: var(--primary); }
 .fc-1 { top: 12%; right: -10px; animation: floatCard 4s ease-in-out infinite; }
@@ -461,9 +488,15 @@ img { max-width: 100%; }
   background: rgba(108,99,255,0.1);
   border: 1px solid rgba(108,99,255,0.2);
   color: var(--primary-light);
-  transition: all var(--transition);
+  transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+  cursor: default;
 }
-.tag:hover { background: rgba(108,99,255,0.2); transform: translateY(-1px); }
+.tag:hover {
+  background: rgba(108,99,255,0.18);
+  border-color: var(--primary);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(108,99,255,0.3);
+}
 
 .social-row { display: flex; gap: 10px; margin-top: 1.5rem; }
 .social-btn {
@@ -471,9 +504,21 @@ img { max-width: 100%; }
   background: var(--card); border: 1px solid var(--border);
   color: var(--text-muted); font-size: 1rem;
   display: flex; align-items: center; justify-content: center;
-  transition: all var(--transition);
+  transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+  position: relative; overflow: hidden;
 }
-.social-btn:hover { color: var(--primary); border-color: var(--primary); background: rgba(108,99,255,0.1); transform: translateY(-2px); }
+.social-btn::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at center, rgba(108,99,255,0.2), transparent);
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.social-btn:hover::before { opacity: 1; }
+.social-btn:hover {
+  color: var(--primary); border-color: var(--primary);
+  background: rgba(108,99,255,0.1);
+  transform: translateY(-4px) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(108,99,255,0.3);
+}
 
 .stats-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
@@ -482,15 +527,20 @@ img { max-width: 100%; }
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.5rem 1.25rem;
   text-align: center; position: relative; overflow: hidden;
-  transition: all var(--transition);
+  transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
 }
 .stat-card::before {
   content: ''; position: absolute; inset: 0;
-  background: var(--gradient); opacity: 0;
-  transition: opacity var(--transition);
+  background: linear-gradient(135deg, transparent, rgba(108,99,255,0.05), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
 }
-.stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(108,99,255,0.2); }
-.stat-card:hover::before { opacity: 0.05; }
+.stat-card:hover::before { transform: translateX(100%); }
+.stat-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 0 1px rgba(108,99,255,0.3), 0 16px 48px rgba(108,99,255,0.2);
+  border-color: rgba(108,99,255,0.4);
+}
 .stat-icon { font-size: 1.4rem; color: var(--primary); margin-bottom: 0.5rem; position: relative; }
 .stat-num {
   font-size: 2rem; font-weight: 900;
@@ -802,6 +852,37 @@ img { max-width: 100%; }
 .proj-lang {
   font-size: 0.72rem; font-weight: 600; color: var(--text-muted);
   display: flex; align-items: center; gap: 5px;
+}
+
+.proj-ribbon {
+  position: absolute; top: 18px; right: -32px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff; font-size: 0.68rem; font-weight: 700;
+  padding: 4px 40px; text-transform: uppercase; letter-spacing: 0.08em;
+  transform: rotate(45deg); box-shadow: 0 4px 12px rgba(108,99,255,0.4);
+  z-index: 5;
+}
+
+.proj-features {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 0.75rem 0; margin: 0.5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.proj-feature {
+  font-size: 0.78rem; font-weight: 500; color: var(--text-muted);
+  display: flex; align-items: center; gap: 7px;
+  transition: all 0.2s ease;
+}
+.proj-feature i {
+  color: #22c55e; font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+.proj-card:hover .proj-feature i {
+  transform: scale(1.15);
+}
+.proj-feature:hover {
+  color: var(--text); transform: translateX(3px);
 }
 
 /* ============================================================
