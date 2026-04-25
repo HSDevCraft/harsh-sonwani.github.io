@@ -234,34 +234,8 @@ if (achGrid) {
   achObs.observe(achGrid);
 }
 
-/* ── Contact Form ── */
-const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
-if (form) {
-  form.addEventListener('submit', e => {
-    const btn = form.querySelector('.form-btn');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-    note.textContent = '';
-    
-    /* Form will submit to Formspree via standard form submission */
-    /* Formspree handles the email delivery and redirects on success */
-  });
-  
-  /* Check if form was submitted successfully (Formspree redirects with ?success=true) */
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('success') === 'true') {
-    note.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-    note.style.color = '#22c55e';
-    form.reset();
-    const btn = form.querySelector('.form-btn');
-    btn.disabled = false;
-    btn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
-    setTimeout(() => note.textContent = '', 5000);
-    /* Clean up URL */
-    window.history.replaceState({}, document.title, window.location.pathname);
-  }
-}
+/* ── Contact Methods ── */
+/* Direct contact links - no form submission needed */
 
 /* ── Section progress indicator (subtle top bar) ── */
 const progressBar = document.createElement('div');
