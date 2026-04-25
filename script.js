@@ -239,19 +239,28 @@ const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
 if (form) {
   form.addEventListener('submit', e => {
-    e.preventDefault();
     const btn = form.querySelector('.form-btn');
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-    setTimeout(() => {
-      note.textContent = '✓  Message sent! I\'ll get back to you soon.';
-      note.style.color = '#22c55e';
-      btn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
-      btn.disabled = false;
-      form.reset();
-      setTimeout(() => note.textContent = '', 5000);
-    }, 1200);
+    note.textContent = '';
+    
+    /* Form will submit to Formspree via standard form submission */
+    /* Formspree handles the email delivery and redirects on success */
   });
+  
+  /* Check if form was submitted successfully (Formspree redirects with ?success=true) */
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    note.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+    note.style.color = '#22c55e';
+    form.reset();
+    const btn = form.querySelector('.form-btn');
+    btn.disabled = false;
+    btn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+    setTimeout(() => note.textContent = '', 5000);
+    /* Clean up URL */
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
 }
 
 /* ── Section progress indicator (subtle top bar) ── */
