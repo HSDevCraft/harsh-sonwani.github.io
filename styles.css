@@ -819,6 +819,23 @@ img { max-width: 100%; }
 }
 
 .proj-card h3 { font-size: 1.08rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+.proj-title-link {
+  color: inherit; text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.proj-title-link:hover {
+  color: var(--primary);
+}
+.proj-title-link::after {
+  content: ' ↗';
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-size: 0.85em;
+}
+.proj-title-link:hover::after {
+  opacity: 1;
+}
 .proj-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.75; flex: 1; }
 .proj-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.75; flex: 1; }
 
