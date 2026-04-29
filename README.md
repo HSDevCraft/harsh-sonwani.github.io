@@ -12,7 +12,7 @@ Senior AI/ML Engineer specialising in GenAI, Agentic AI, RAG systems, and scalab
 
 | Role | Company | Period |
 |---|---|---|
-| Senior Software Engineer | HCLSoftware · SPAR R&D | Dec 2025 – Present |
+| Senior Software Engineer | HCLSoftware · SPARC R&D | Dec 2025 – Present |
 | Senior SSE & AI Engineering Team Lead | HCLSoftware · BigFix AEX R&D | Oct 2024 – Dec 2025 |
 | Senior SSE · GenAI R&D | HCLSoftware · BigFix AEX R&D | July 2023 – Oct 2024 |
 | GenAI Research Intern | Variable Energy Cyclotron Centre · DAE | June 2023 – July 2023 |
