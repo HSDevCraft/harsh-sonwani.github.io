@@ -6,7 +6,7 @@ Personal portfolio site for **Harsh Sonwani**, Engineer (AI/ML/GenAI/Agentic AI)
 
 M.Tech CSE (NIT Rourkela, CGPA 8.15) · B.Tech IT (BIT Durg, CGPA 9.17)
 
-Engineer (AI/ML/GenAI/Agentic AI) specialising in GenAI, Agentic AI, RAG systems, and scalable LLM inference. 2+ years of industry experience building production-grade GenAI platforms and leading AI engineering teams.
+Engineer (AI/ML/GenAI/Agentic AI) specialising in GenAI, Agentic AI, RAG systems, and scalable LLM inference. 3+ years of industry experience building production-grade GenAI platforms and leading AI engineering teams.
 
 ## Experience
 
