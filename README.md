@@ -1,12 +1,12 @@
 # Harsh Sonwani — Portfolio (harsh-sonwani.github.io)
 
-Personal portfolio site for **Harsh Sonwani**, Engineer (AI/ML/GenAI/Agentic AI) at Ascendion, Bengaluru.
+Personal portfolio site for **Harsh Sonwani**, AWS Certified AI/ML Engineer at Ascendion, Bengaluru.
 
 ## About
 
 M.Tech CSE (NIT Rourkela, CGPA 8.15) · B.Tech IT (BIT Durg, CGPA 9.17)
 
-Engineer (AI/ML/GenAI/Agentic AI) specialising in GenAI, Agentic AI, RAG systems, and scalable LLM inference. 3+ years of industry experience building production-grade GenAI platforms and leading AI engineering teams.
+AWS Certified AI/ML Engineer specializing in Generative AI, LLM applications, RAG systems, and AI agents. Experienced in designing and delivering scalable, production-ready AI solutions for enterprise and IT operations use cases with a focus on performance, reliability, clean architecture, and end-to-end solution delivery.
 
 ## Experience
 
